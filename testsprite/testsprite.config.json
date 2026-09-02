@@ -1,0 +1,38 @@
+{
+  "name": "AutoMart E2E & API Verification Suite",
+  "version": "1.0.0",
+  "environments": {
+    "local": {
+      "frontendUrl": "http://localhost:3000",
+      "backendUrl": "http://localhost:5000/api/v1"
+    },
+    "staging": {
+      "frontendUrl": "https://staging.automart.com",
+      "backendUrl": "https://api-staging.automart.com/v1"
+    }
+  },
+  "defaultEnvironment": "local",
+  "timeout": 30000,
+  "retries": 2,
+  "parallel": true,
+  "reporter": ["console", "json", "html"],
+  "outputDir": "./testsprite/reports",
+  "auth": {
+    "buyer": {
+      "name": "Alex QA Buyer",
+      "email": "qa.buyer@automart.com",
+      "password": "Password123!",
+      "role": "BUYER"
+    },
+    "dealer": {
+      "name": "Apex QA Dealer",
+      "email": "qa.dealer@automart.com",
+      "password": "Password123!",
+      "role": "DEALER"
+    }
+  },
+  "viewport": {
+    "desktop": { "width": 1440, "height": 900 },
+    "mobile": { "width": 375, "height": 812 }
+  }
+}
