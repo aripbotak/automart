@@ -214,7 +214,7 @@ export class VehicleService {
         vin: input.vin.toUpperCase(),
         sellerId,
         images: {
-          create: images.map((img, index) => ({
+          create: images.map((img: any, index: number) => ({
             imageUrl: img.imageUrl,
             publicId: img.publicId,
             isPrimary: img.isPrimary ?? index === 0,
@@ -222,7 +222,7 @@ export class VehicleService {
             order: img.order ?? index,
           })),
         },
-      },
+      } as any,
       include: {
         images: true,
         seller: {
@@ -269,7 +269,7 @@ export class VehicleService {
         ...(images && {
           images: {
             deleteMany: {},
-            create: images.map((img, index) => ({
+            create: images.map((img: any, index: number) => ({
               imageUrl: img.imageUrl,
               publicId: img.publicId,
               isPrimary: img.isPrimary ?? index === 0,
@@ -278,7 +278,7 @@ export class VehicleService {
             })),
           },
         }),
-      },
+      } as any,
       include: {
         images: true,
       },
