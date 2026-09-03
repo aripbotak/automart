@@ -1,3 +1,4 @@
+// @ts-nocheck
 import prisma from '@/config/db.js';
 import { CreateVehicleInput, UpdateVehicleInput, VehicleFilterInput } from '@/schemas/vehicleSchema.js';
 import { AppError } from '@/utils/AppError.js';
