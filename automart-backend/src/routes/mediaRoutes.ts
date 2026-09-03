@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { MediaController } from '@/controllers/mediaController.js';
-import { upload } from '@/middlewares/uploadMiddleware.js';
-import { authenticate } from '@/middlewares/authMiddleware.js';
-import { validate } from '@/middlewares/validateMiddleware.js';
-import { presignedUrlSchema } from '@/schemas/mediaSchema.js';
+import { MediaController } from '../controllers/mediaController.js';
+import { upload } from '../middlewares/uploadMiddleware.js';
+import { authenticate } from '../middlewares/authMiddleware.js';
+import { validate } from '../middlewares/validateMiddleware.js';
+import { presignedUrlSchema } from '../schemas/mediaSchema.js';
 
 const router = Router();
 

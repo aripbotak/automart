@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { InquiryService } from '@/services/inquiryService.js';
-import { ApiResponse } from '@/utils/response.js';
-import { AuthenticatedRequest } from '@/types/index.js';
+import { InquiryService } from '../services/inquiryService.js';
+import { ApiResponse } from '../utils/response.js';
+import { AuthenticatedRequest } from '../types/index.js';
 
 export class InquiryController {
   static async createInquiry(

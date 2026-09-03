@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { VehicleController } from '@/controllers/vehicleController.js';
-import { validate } from '@/middlewares/validateMiddleware.js';
-import { authenticate, authorize } from '@/middlewares/authMiddleware.js';
+import { VehicleController } from '../controllers/vehicleController.js';
+import { validate } from '../middlewares/validateMiddleware.js';
+import { authenticate, authorize } from '../middlewares/authMiddleware.js';
 import {
   createVehicleSchema,
   updateVehicleSchema,
   vehicleFilterSchema,
-} from '@/schemas/vehicleSchema.js';
+} from '../schemas/vehicleSchema.js';
 import { Role } from '@prisma/client';
 
 const router = Router();

@@ -1,8 +1,8 @@
 import { Response, NextFunction } from 'express';
 import { Role } from '@prisma/client';
-import { AuthenticatedRequest } from '@/types/index.js';
-import { verifyToken } from '@/utils/jwt.js';
-import { AppError } from '@/utils/AppError.js';
+import { AuthenticatedRequest } from '../types/index.js';
+import { verifyToken } from '../utils/jwt.js';
+import { AppError } from '../utils/AppError.js';
 
 export function authenticate(req: AuthenticatedRequest, _res: Response, next: NextFunction): void {
   const authHeader = req.headers.authorization;

@@ -1,8 +1,8 @@
-import prisma from '@/config/db.js';
-import { RegisterInput, LoginInput } from '@/schemas/authSchema.js';
-import { hashPassword, comparePassword } from '@/utils/password.js';
-import { generateToken } from '@/utils/jwt.js';
-import { AppError } from '@/utils/AppError.js';
+import prisma from '../config/db.js';
+import { RegisterInput, LoginInput } from '../schemas/authSchema.js';
+import { hashPassword, comparePassword } from '../utils/password.js';
+import { generateToken } from '../utils/jwt.js';
+import { AppError } from '../utils/AppError.js';
 import { Role } from '@prisma/client';
 
 export class AuthService {

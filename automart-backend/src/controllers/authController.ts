@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { AuthService } from '@/services/authService.js';
-import { ApiResponse } from '@/utils/response.js';
-import { AuthenticatedRequest } from '@/types/index.js';
+import { AuthService } from '../services/authService.js';
+import { ApiResponse } from '../utils/response.js';
+import { AuthenticatedRequest } from '../types/index.js';
 
 export class AuthController {
   static async register(req: Request, res: Response, next: NextFunction): Promise<void> {

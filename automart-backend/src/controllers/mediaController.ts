@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { MediaService } from '@/services/mediaService.js';
-import { ApiResponse } from '@/utils/response.js';
-import { AppError } from '@/utils/AppError.js';
+import { MediaService } from '../services/mediaService.js';
+import { ApiResponse } from '../utils/response.js';
+import { AppError } from '../utils/AppError.js';
 
 export class MediaController {
   static async upload(req: Request, res: Response, next: NextFunction): Promise<void> {

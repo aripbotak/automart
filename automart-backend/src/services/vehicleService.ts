@@ -1,8 +1,8 @@
 // @ts-nocheck
-import prisma from '@/config/db.js';
-import { CreateVehicleInput, UpdateVehicleInput, VehicleFilterInput } from '@/schemas/vehicleSchema.js';
-import { AppError } from '@/utils/AppError.js';
-import { PaginatedResult } from '@/types/index.js';
+import prisma from '../config/db.js';
+import { CreateVehicleInput, UpdateVehicleInput, VehicleFilterInput } from '../schemas/vehicleSchema.js';
+import { AppError } from '../utils/AppError.js';
+import { PaginatedResult } from '../types/index.js';
 import {
   Prisma,
   Vehicle,
@@ -12,6 +12,7 @@ import {
   VehicleCondition,
   Role,
 } from '@prisma/client';
+
 
 export class VehicleService {
   static async getVehicles(filter: VehicleFilterInput): Promise<PaginatedResult<Vehicle>> {

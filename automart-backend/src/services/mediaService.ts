@@ -1,9 +1,9 @@
-import { cloudinary } from '@/config/cloudinary.js';
-import { s3Client } from '@/config/s3.js';
-import config from '@/config/env.js';
+import { cloudinary } from '../config/cloudinary.js';
+import { s3Client } from '../config/s3.js';
+import config from '../config/env.js';
 import { PutObjectCommand } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
-import { AppError } from '@/utils/AppError.js';
+import { AppError } from '../utils/AppError.js';
 import crypto from 'crypto';
 
 export interface UploadResult {
@@ -41,7 +41,7 @@ export class MediaService {
           ],
           public_id: `${Date.now()}-${crypto.randomBytes(4).toString('hex')}`,
         },
-        (error, result) => {
+        (error: any, result: any) => {
           if (error || !result) {
             reject(new AppError(`Cloudinary upload failed: ${error?.message || 'Unknown error'}`));
           } else {

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { AnyZodObject, ZodError } from 'zod';
-import { AppError } from '@/utils/AppError.js';
+import { AppError } from '../utils/AppError.js';
 
 export function validate(schema: {
   body?: AnyZodObject;

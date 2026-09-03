@@ -1,6 +1,6 @@
-import prisma from '@/config/db.js';
-import { CreateInquiryInput } from '@/schemas/inquirySchema.js';
-import { AppError } from '@/utils/AppError.js';
+import prisma from '../config/db.js';
+import { CreateInquiryInput } from '../schemas/inquirySchema.js';
+import { AppError } from '../utils/AppError.js';
 import { InquiryStatus, Role } from '@prisma/client';
 
 export class InquiryService {

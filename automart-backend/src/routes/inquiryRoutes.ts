@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import { InquiryController } from '@/controllers/inquiryController.js';
-import { validate } from '@/middlewares/validateMiddleware.js';
-import { authenticate } from '@/middlewares/authMiddleware.js';
+import { InquiryController } from '../controllers/inquiryController.js';
+import { validate } from '../middlewares/validateMiddleware.js';
+import { authenticate } from '../middlewares/authMiddleware.js';
 import {
   createInquirySchema,
   updateInquiryStatusSchema,
-} from '@/schemas/inquirySchema.js';
+} from '../schemas/inquirySchema.js';
 
 const router = Router();
 

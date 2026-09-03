@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { JwtPayload } from '@/types/index.js';
+import { JwtPayload } from '../types/index.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret_for_development_mode_only';
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';

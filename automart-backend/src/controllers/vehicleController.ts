@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { VehicleService } from '@/services/vehicleService.js';
-import { ApiResponse } from '@/utils/response.js';
-import { AuthenticatedRequest } from '@/types/index.js';
+import { VehicleService } from '../services/vehicleService.js';
+import { ApiResponse } from '../utils/response.js';
+import { AuthenticatedRequest } from '../types/index.js';
 
 export class VehicleController {
   static async getVehicles(req: Request, res: Response, next: NextFunction): Promise<void> {
