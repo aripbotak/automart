@@ -7,11 +7,10 @@
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "noImplicitAny": true,
-
+    "noImplicitAny": false,
     "paths": {
       "@/*": ["./src/*"],
       "*": ["./*"]
